@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Validación de teléfono mediante expresiones regulares</h1>
+    <form>
+      <input
+        type="text"
+        placeholder="Enter 9 digits of your phone"
+        name="mobile"
+        class="form-control"
+        pattern="(\d[0-9]{8}|0[0-9]{9}|\+\d[0-9]{10})$"
+        required
+      />
+      <input type="Submit"/>
+    </form>
+    <style>
+      input:not(:placeholder-shown):invalid {
+        background-color: pink;
+        box-shadow: 0 0 0 2px red;
+      }
+    </style>
+  </body>
+</html>
